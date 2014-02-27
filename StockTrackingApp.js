@@ -14,6 +14,6 @@ if (Meteor.isClient) {
 
 if (Meteor.isServer) {
   Meteor.startup(function () {
-    scrape();
+    scrape("http://www.imdb.com/chart/");
   });
 }

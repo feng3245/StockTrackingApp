@@ -1,10 +1,8 @@
-scrape = function()
+scrape = function(url)
 {
 
 var request = Npm.require('request');
 var cheerio = Npm.require('cheerio');
-
-var url = "http://www.imdb.com/chart/";
 
   request({
               "uri": url
