@@ -1,3 +1,4 @@
+scrappedData = new Meteor.Collection("ScrappedData");
 if (Meteor.isClient) {
   Template.hello.greeting = function () {
     return "Welcome to StockTrackingApp.";
@@ -14,6 +15,7 @@ if (Meteor.isClient) {
 
 if (Meteor.isServer) {
   Meteor.startup(function () {
-    scrape("http://www.imdb.com/chart/");
+    scrape("http://ca.indeed.com/");
+    console.log(scrappedData.findOne({category:"content"}));
   });
 }
