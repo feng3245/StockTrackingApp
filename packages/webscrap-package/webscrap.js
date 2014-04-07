@@ -16,6 +16,7 @@ scrape = function(url)
 
 
 				strContent += body;
+				
 				scrappedData.remove({ 'category' :"content"});
 				scrappedData.insert({category:"content", content:""+strContent});
 
