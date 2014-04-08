@@ -14,7 +14,12 @@ if (Meteor.isClient) {
 }
 
 if (Meteor.isServer) {
-   
+    Email.send({
+from: "feng3245@gmail.com",
+to: "feng3245@gmail.com",
+subject: "Subject",
+text: "Here is some text"
+});
   Meteor.startup(function () {
      
     fs = Npm.require('fs');
@@ -26,6 +31,7 @@ if (Meteor.isServer) {
       console.log('The file ' + name + ' (' + encoding + ') was saved to ' + path);
     }
   });
+   
     //saveFile(scrappedData.findOne({category:"content"}).content, "whatever", "./", "ANSI");
     scrape("http://ca.indeed.com/jobs?q=hr+assistant&l=Toronto,+ON&rq=1&fromage=last");
     
