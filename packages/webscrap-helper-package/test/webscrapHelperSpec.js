@@ -1,5 +1,5 @@
 require("../webscrapeHelper.js");
-var expect = require("../.npm/node_modules/chai/chai.js").expect
+var expect = require("../.npm/node_modules/chai/chai.js").expect;
 var parser = new linkParser();
 
 
