@@ -86,8 +86,13 @@ Indeed.com</title>
 var pingUrlsForGA = [];
 
  
+<<<<<<< HEAD
 var searchUID = '18m0tpcc30nkh2pu';
 var tk = '18m0tpcc30nkh2pu';
+=======
+var searchUID = '18ksolc0d19t14u1';
+var tk = '18ksolc0d19t14u1';
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 
 var loggedIn = false;
 var myindeed = true;
@@ -100,11 +105,19 @@ var searchState = 'q=hr+assistant&amp;l=Toronto%2C+ON&amp;fromage=last';
 var searchQS = 'q=hr+assistant&l=Toronto,+ON&rq=1&fromage=last';
 var eventType = 'jobsearch';
 var jasxSaveColorTst = 'ALLRED';
+<<<<<<< HEAD
 var jasxHideBlockTst = 'CONTROL';
 function clk(id) { var a = document.getElementById(id); var hr = a.href; var si = a.href.indexOf('&jsa='); if (si > 0) return; var jsh = hr + '&tk=18m0tpcc30nkh2pu&jsa=5427'; a.href = jsh; }
 function sjomd(id) { var a = document.getElementById(id); var hr = a.href; var ocs = hr.indexOf('&oc=1'); if (ocs < 0) return; var oce = ocs + 5; a.href = hr.substring(0, ocs) + hr.substring(oce); }
 function sjoc(id) { var a = document.getElementById(id); a.href = a.href + '&oc=1'; }
 function ptk(st,p) {document.cookie = 'PTK="tk=18m0tpcc30nkh2pu&type=jobsearch&subtype='+st+(p?'&'+p:'')+'"; path=/';}
+=======
+var jasxHideBlockTst = 'HIDEBLOCK';
+function clk(id) { var a = document.getElementById(id); var hr = a.href; var si = a.href.indexOf('&jsa='); if (si > 0) return; var jsh = hr + '&tk=18ksolc0d19t14u1&jsa=1549'; a.href = jsh; }
+function sjomd(id) { var a = document.getElementById(id); var hr = a.href; var ocs = hr.indexOf('&oc=1'); if (ocs < 0) return; var oce = ocs + 5; a.href = hr.substring(0, ocs) + hr.substring(oce); }
+function sjoc(id) { var a = document.getElementById(id); a.href = a.href + '&oc=1'; }
+function ptk(st,p) {document.cookie = 'PTK="tk=18ksolc0d19t14u1&type=jobsearch&subtype='+st+(p?'&'+p:'')+'"; path=/';}
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 function rbptk(st, c, p) { ptk(st, 'cat='+c+(p?'&p='+p:''));}
 
 </script>
@@ -176,6 +189,7 @@ el.parentNode.insertBefore(s, el);
 
 
 
+
 <meta name="description" content="190  HR Assistant Job vacancies available in Toronto, ON on Indeed Canada.  one search.  all jobs.">
 
 <meta name="keywords" content="HR Assistant Jobs in Toronto, ON, Toronto, ON careers, Toronto, ON employment, Toronto, ON job listings, Toronto, ON job search, Toronto, ON search engine, work in Toronto, ON, Canada">
@@ -191,7 +205,6 @@ el.parentNode.insertBefore(s, el);
 
 
 <script type="text/javascript">
-var indeedCsrfToken = 'QkEaTvZRcBQ2fVMRGgTIphrs3ai13Md7';
 </script>
 
 
@@ -579,7 +592,11 @@ e.stopPropagation ? e.stopPropagation() : e.cancelBubble = true;
 
 
 
+<<<<<<< HEAD
 <span class="navBi"><span id="navpromo"><a href="/promo/resume" onclick="window.location=this.href + '?from=nav&subfrom=rezprmstd&trk.origin=jobsearch&trk.variant=rezprmstd&trk.tk=18m0tpcc30nkh2pu'; return false;">Post your resume</a></span></span>
+=======
+<span class="navBi"><span id="navpromo"><a href="/promo/resume" onclick="window.location=this.href + '?from=nav&subfrom=rezprmstd&trk.origin=jobsearch&trk.variant=rezprmstd&trk.tk=18ksolc0d19t14u1'; return false;">Post your resume</a></span></span>
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 
 
 
@@ -838,10 +855,17 @@ formptk('topsearch','what_ac','w',['where_ac','what_ac']);">
     
     
         
+<<<<<<< HEAD
         initAutocomplete('where_ac', gbid('where'), gbid('acdiv'), '/rpc/suggest?from=serp&tk=18m0tpcc30nkh2pu', function() { formptk('topsearch','where_ac', '', ['where_ac','what_ac']); });
         
         
         initAutocomplete('what_ac', gbid('what'), gbid('what_acdiv'), '/rpc/suggest?what=true&tk=18m0tpcc30nkh2pu', function () {formptk('topsearch', 'what_ac', 'w', ['where_ac','what_ac']);});
+=======
+        initAutocomplete('where_ac', gbid('where'), gbid('acdiv'), '/rpc/suggest?from=serp&tk=18ksolc0d19t14u1', function() { formptk('topsearch','where_ac', '', ['where_ac','what_ac']); });
+        
+        
+        initAutocomplete('what_ac', gbid('what'), gbid('what_acdiv'), '/rpc/suggest?what=true&tk=18ksolc0d19t14u1', function () {formptk('topsearch', 'what_ac', 'w', ['where_ac','what_ac']);});
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
         
     
 
@@ -852,8 +876,13 @@ formptk('topsearch','what_ac','w',['where_ac','what_ac']);">
 
 
 <script type="text/javascript">
+<<<<<<< HEAD
 function rclk(el,jobdata,oc) { var ocstr = oc ? '&onclick=1' : ''; document.cookie='RCLK="jk='+jobdata.jk+'&tk=18m0tpcc30nkh2pu&rd='+jobdata.rd+'&qd=7tdTJLF8oc4dPpT7T_zGvIBScHLh1N9LhRGuDTxm0mY8kx2rUr2f0zfVJ754EIEf_S-qgKPNpnjdAdthP7AfZS16SbLxElSKls8DGx4Nf2a5sjjEaJ8_O2Xs4nTvHZszD_v8XH0wHzCHvkJLwOl8pA&ts=1398043095427'+ocstr+'"; path=/'; return true;}
 function zrprclk(el,jobdata,oc) { var ocstr = oc ? '&onclick=1' : ''; document.cookie='RCLK="jk='+jobdata.jk+'&tk=18m0tpcc30nkh2pu&from=reconzrp&rd='+jobdata.rd+'&qd=7tdTJLF8oc4dPpT7T_zGvIBScHLh1N9LhRGuDTxm0mY8kx2rUr2f0zfVJ754EIEf_S-qgKPNpnjdAdthP7AfZS16SbLxElSKls8DGx4Nf2a5sjjEaJ8_O2Xs4nTvHZszD_v8XH0wHzCHvkJLwOl8pA&ts=1398043095427'+ocstr+'"; path=/'; return true;}
+=======
+function rclk(el,jobdata,oc) { var ocstr = oc ? '&onclick=1' : ''; document.cookie='RCLK="jk='+jobdata.jk+'&tk=18ksolc0d19t14u1&rd='+jobdata.rd+'&qd=7tdTJLF8oc4dPpT7T_zGvIBScHLh1N9LhRGuDTxm0mY8kx2rUr2f0zfVJ754EIEf_S-qgKPNpnjdAdthP7AfZeURx2Z10bFYWM1ZP-Bw3NROt0lVzCq5L9jQj0H-5KDbD_v8XH0wHzCHvkJLwOl8pA&ts=1396829761549'+ocstr+'"; path=/'; return true;}
+function zrprclk(el,jobdata,oc) { var ocstr = oc ? '&onclick=1' : ''; document.cookie='RCLK="jk='+jobdata.jk+'&tk=18ksolc0d19t14u1&from=reconzrp&rd='+jobdata.rd+'&qd=7tdTJLF8oc4dPpT7T_zGvIBScHLh1N9LhRGuDTxm0mY8kx2rUr2f0zfVJ754EIEf_S-qgKPNpnjdAdthP7AfZeURx2Z10bFYWM1ZP-Bw3NROt0lVzCq5L9jQj0H-5KDbD_v8XH0wHzCHvkJLwOl8pA&ts=1396829761549'+ocstr+'"; path=/'; return true;}
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 
 
 
@@ -871,47 +900,83 @@ jobmap[0]= {jk:'18483021b2df5da5',efccid: 'd13aa866c3dd803f',srcid:'4e8cb1809673
 
 
 
+<<<<<<< HEAD
 jobmap[1]= {jk:'92978472963467f4',efccid: '5c827cbf334a54d1',srcid:'fd7d8801c08838e9',cmpid:'3b46e2d2a9ff211f',num:'1',srcname:'EventMobi',cmp:'EventMobi',cmpesc:'EventMobi',cmplnk:'/EventMobi-jobs-in-Toronto,-ON',loc:'Toronto, ON',country:'CA',zip:'',city:'Toronto',title:'Executive Assistant to CEO',locid:'aaab304de0fc22ae',rd:'lOmVpO1ph2ix06po6lKMeyhiydDAq2W0HI_GqxW-_Gw'};
+=======
+jobmap[1]= {jk:'3c023dca75a64f67',efccid: '',srcid:'1e9fd8025715e61c',cmpid:'69e498127a9bbb65',num:'1',srcname:'Indeed',cmp:'Mainline Services Inc',cmpesc:'Mainline Services Inc',cmplnk:'/Mainline-Services-jobs-in-Toronto,-ON',loc:'Toronto, ON',country:'CA',zip:'',city:'Toronto',title:'HR\/Marketing\/CSR Representative',locid:'aaab304de0fc22ae',rd:'sVJRBTJN33rrfSOnZoMpkC0o3ZYbrhLo9NJZ0smIueg'};
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 
 
 
 
+<<<<<<< HEAD
 jobmap[2]= {jk:'e389c21b2b053ea2',efccid: '68ca7a7912ae9b27',srcid:'4ce21996089b80e9',cmpid:'0d1fa56918935d03',num:'2',srcname:'South Riverdale Community Health Centre',cmp:'South Riverdale Community Health Centre',cmpesc:'South Riverdale Community Health Centre',cmplnk:'/South-Riverdale-Community-Health-Centre-jobs-in-Toronto,-ON',loc:'Toronto, ON',country:'CA',zip:'',city:'Toronto',title:'HUMAN RESOURCES\/PAYROLL ASSISTANT',locid:'aaab304de0fc22ae',rd:'h-2gjiNt_sZfXXnyRbm33mt1Np6q7ZYY9MxsHOz_JUQ'};
+=======
+jobmap[2]= {jk:'a1a8ea93e60bac95',efccid: '',srcid:'06bc22709d9df77a',cmpid:'772890b6606948ae',num:'2',srcname:'SickKids',cmp:'SickKids',cmpesc:'SickKids',cmplnk:'/SickKids-jobs-in-Toronto,-ON',loc:'Toronto, ON',country:'CA',zip:'',city:'Toronto',title:'Senior Administrative Assistant',locid:'aaab304de0fc22ae',rd:'iiMcqekBBH0OCNF58pyZLChiydDAq2W0HI_GqxW-_Gw'};
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 
 
 
 
+<<<<<<< HEAD
 jobmap[3]= {jk:'ec7f98dd99e120cf',efccid: '4da543f8ac217cc2',srcid:'4e26b6692c5a8f97',cmpid:'8360316bf7cc533f',num:'3',srcname:'Mon Sheong Foundation',cmp:'Mon Sheong Foundation',cmpesc:'Mon Sheong Foundation',cmplnk:'/Mon-Sheong-Foundation-jobs-in-Toronto,-ON',loc:'Richmond Hill, ON',country:'CA',zip:'',city:'Richmond Hill',title:'Human Resources Administrative Assistant',locid:'f93e0e73656b5441',rd:'7YXdL08N-wHAf6XEH3teRLdFOAie5A6vEDHztx_jrl4'};
+=======
+jobmap[3]= {jk:'98082c5b9475a245',efccid: '',srcid:'5ec23d17d000b6f5',cmpid:'01f233d59d9fb8c6',num:'3',srcname:'Fitzii',cmp:'500 Staffing Inc.',cmpesc:'500 Staffing Inc.',cmplnk:'/500-Staffing-jobs-in-Toronto,-ON',loc:'Mississauga, ON',country:'CA',zip:'',city:'Mississauga',title:'Human Resources Assistant (6 Month Contract)',locid:'8e316d40ed169490',rd:'kiretP4yvcVJ40ulME3l7yhiydDAq2W0HI_GqxW-_Gw'};
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 
 
 
 
+<<<<<<< HEAD
 jobmap[4]= {jk:'3c023dca75a64f67',efccid: '70301a61e60c346e',srcid:'1e9fd8025715e61c',cmpid:'69e498127a9bbb65',num:'4',srcname:'Indeed',cmp:'Mainline Services Inc',cmpesc:'Mainline Services Inc',cmplnk:'/Mainline-Services-jobs-in-Toronto,-ON',loc:'Toronto, ON',country:'CA',zip:'',city:'Toronto',title:'HR\/Marketing\/CSR Representative',locid:'aaab304de0fc22ae',rd:'me-BsVK35rhoAQtTTSfyUy0o3ZYbrhLo9NJZ0smIueg'};
+=======
+jobmap[4]= {jk:'6e612251a4451d4f',efccid: '',srcid:'e292a7106424aba2',cmpid:'537b899e30af3338',num:'4',srcname:'RBC',cmp:'RBC',cmpesc:'RBC',cmplnk:'/RBC-jobs-in-Toronto,-ON',loc:'Toronto, ON',country:'CA',zip:'',city:'Toronto',title:'Coordinator, RBC Executive Recruitment - Toronto, ON',locid:'aaab304de0fc22ae',rd:'w88zQ3j06IfTy1OCcch7OrDzrQSQ4_GdmVQ0_5_fLdw'};
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 
 
 
 
+<<<<<<< HEAD
 jobmap[5]= {jk:'2e99dc3e961ba132',efccid: '30979a5216139aa9',srcid:'b382383a6bdd213e',cmpid:'8eb4621cc548c356',num:'5',srcname:'Monster CA',cmp:'HR Associates',cmpesc:'HR Associates',cmplnk:'/HR-Associates-jobs-in-Toronto,-ON',loc:'Toronto, ON',country:'CA',zip:'',city:'Toronto',title:'Employment Assistant',locid:'aaab304de0fc22ae',rd:'JaRz_RHbZx3P2UHd9c86gLdFOAie5A6vEDHztx_jrl4'};
+=======
+jobmap[5]= {jk:'c4ddbd30ad263911',efccid: '',srcid:'f946e445f15d0c0d',cmpid:'6a8e85775dcd4d01',num:'5',srcname:'CPG Connect',cmp:'Campbell Company of Canada',cmpesc:'Campbell Company of Canada',cmplnk:'/Campbell-Company-of-Canada-jobs-in-Toronto,-ON',loc:'Etobicoke, ON',country:'CA',zip:'',city:'Etobicoke',title:'Assistant Human Resources Manager - Manufacturing',locid:'809c6d1f4c923f9e',rd:'RlVZigh0XWft3OKjwgLBNbDzrQSQ4_GdmVQ0_5_fLdw'};
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 
 
 
 
+<<<<<<< HEAD
 jobmap[6]= {jk:'659cc5d71491db04',efccid: '10eab9fa0e0fbdc9',srcid:'cd88fa209698e4aa',cmpid:'f491d04560cad93b',num:'6',srcname:'Indeed',cmp:'Apple One',cmpesc:'Apple One',cmplnk:'/Apple-One-jobs-in-Toronto,-ON',loc:'Toronto, ON',country:'CA',zip:'',city:'Toronto',title:'HR Coordinator',locid:'aaab304de0fc22ae',rd:'_dKqBLjnBu0V4FEC6e_YKy0o3ZYbrhLo9NJZ0smIueg'};
+=======
+jobmap[6]= {jk:'7c930f67e0506168',efccid: '',srcid:'70a9b31abc2c4e05',cmpid:'32b4fb0c066e7ebb',num:'6',srcname:'Seneca College of Applied Arts and Technology',cmp:'Seneca College of Applied Arts and Technology',cmpesc:'Seneca College of Applied Arts and Technology',cmplnk:'/Seneca-College-of-Applied-Arts-and-Technology-jobs-in-Toronto,-ON',loc:'Toronto, ON',country:'CA',zip:'',city:'Toronto',title:'Talent Acquisition Assistant (Contract) MK',locid:'aaab304de0fc22ae',rd:'Oqt2vmnlHEciExIIUyb8tyhiydDAq2W0HI_GqxW-_Gw'};
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 
 
 
 
+<<<<<<< HEAD
 jobmap[7]= {jk:'62f76a2fa6e88125',efccid: '30979a5216139aa9',srcid:'b382383a6bdd213e',cmpid:'8eb4621cc548c356',num:'7',srcname:'Monster CA',cmp:'HR Associates',cmpesc:'HR Associates',cmplnk:'/HR-Associates-jobs-in-Toronto,-ON',loc:'Toronto, ON',country:'CA',zip:'',city:'Toronto',title:'Administrative Assistant (Government of Ontario)',locid:'aaab304de0fc22ae',rd:'9q5YUuiWmDBK3_8xUBIYTbdFOAie5A6vEDHztx_jrl4'};
+=======
+jobmap[7]= {jk:'934feb07ad772e37',efccid: '',srcid:'8b17acc5f001bdbf',cmpid:'e22cc313a4c9eb1c',num:'7',srcname:'OfficeTeam',cmp:'OfficeTeam',cmpesc:'OfficeTeam',cmplnk:'/OfficeTeam-jobs-in-Toronto,-ON',loc:'North York, ON',country:'CA',zip:'',city:'North York',title:'Human Resources Assistant',locid:'6a1987c17e3bfa1c',rd:'ARKlF0eSs_DGJ01OmhvJyrDzrQSQ4_GdmVQ0_5_fLdw'};
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 
 
 
 
+<<<<<<< HEAD
 jobmap[8]= {jk:'b71c312a927ad98e',efccid: '5f96bb4c00c11814',srcid:'605a5e69548d0a21',cmpid:'6d9b8e75dfffb17e',num:'8',srcname:'Bell Canada',cmp:'Bell',cmpesc:'Bell',cmplnk:'/Bell-jobs-in-Toronto,-ON',loc:'Toronto, ON',country:'CA',zip:'',city:'Toronto',title:'Administrative Assistant',locid:'aaab304de0fc22ae',rd:'bNMECOqyF6kpj02B05gvVhn3CLYlxUfiwJctXe1AQeo'};
+=======
+jobmap[8]= {jk:'4ea6df978fd61d67',efccid: '',srcid:'e292a7106424aba2',cmpid:'537b899e30af3338',num:'8',srcname:'RBC',cmp:'RBC',cmpesc:'RBC',cmplnk:'/RBC-jobs-in-Toronto,-ON',loc:'Toronto, ON',country:'CA',zip:'',city:'Toronto',title:'Executive Assistant to Head, Investment Solutions',locid:'aaab304de0fc22ae',rd:'pTgUcGIzjOL3UAa9RDW0rShiydDAq2W0HI_GqxW-_Gw'};
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 
 
 
 
+<<<<<<< HEAD
 jobmap[9]= {jk:'9afae3f0c258cd75',efccid: '7f4fdbc7b2e0699f',srcid:'e292a7106424aba2',cmpid:'537b899e30af3338',num:'9',srcname:'RBC',cmp:'RBC',cmpesc:'RBC',cmplnk:'/RBC-jobs-in-Toronto,-ON',loc:'Toronto, ON',country:'CA',zip:'',city:'Toronto',title:'Executive Administrative Assistant',locid:'aaab304de0fc22ae',rd:'aiQfjM34CkpC7BRqogFKQGt1Np6q7ZYY9MxsHOz_JUQ'};
+=======
+jobmap[9]= {jk:'e2a6067157ab9fe8',efccid: '',srcid:'a9d5c5320c64b29a',cmpid:'9d98e659fe07fe0e',num:'9',srcname:'Indeed',cmp:'Gurulink',cmpesc:'Gurulink',cmplnk:'/Gurulink-jobs-in-Toronto,-ON',loc:'Toronto, ON',country:'CA',zip:'',city:'Toronto',title:'Office Support Assistant',locid:'aaab304de0fc22ae',rd:'YXTTghDaEzZWoa-HazD2dC0o3ZYbrhLo9NJZ0smIueg'};
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 
 
 
@@ -1202,7 +1267,11 @@ jobmap[9]= {jk:'9afae3f0c258cd75',efccid: '7f4fdbc7b2e0699f',srcid:'e292a7106424
 <li onmousedown="rbptk('rb', 'cmp', '3');">
 
 
+<<<<<<< HEAD
 <a  href="/jobs?q=Longo%27s&l=Toronto,+ON" title="Longo&#039;s">Longo&#039;s</a>
+=======
+<a  href="/jobs?q=Pivotal+Integrated+HR+Solutions&l=Toronto,+ON&nc=jasx" title="Pivotal Integrated HR Solutions">Pivotal Integrated HR Solutions</a>
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 
 </li>
 
@@ -1210,7 +1279,19 @@ jobmap[9]= {jk:'9afae3f0c258cd75',efccid: '7f4fdbc7b2e0699f',srcid:'e292a7106424
 <li onmousedown="rbptk('rb', 'cmp', '4');">
 
 
+<<<<<<< HEAD
 <a  href="/Avery-HR-jobs-in-Toronto,-ON" title="Avery HR">Avery HR</a>
+=======
+<a  href="/Party-City-jobs-in-Toronto,-ON" title="Party City">Party City</a>
+
+</li>
+
+
+<li onmousedown="rbptk('rb', 'cmp', '5');">
+
+
+<a  href="/Fuze-HR-jobs-in-Toronto,-ON" title="Fuze HR">Fuze HR</a>
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 
 </li>
 
@@ -1383,8 +1464,13 @@ color: #666666;
 
 
 
+<<<<<<< HEAD
 <div id="searchCount">Jobs 1 to 10 of 190</div>
 <div id="resumePromo"><a href="/promo/resume" onmousedown="this.href = appendParamsOnce( this.href, '?from=serptop&subfrom=resprmrtop&trk.origin=jobsearch&trk.variant=resprmrtop&trk.tk=18m0tpcc30nkh2pu')"><span class="ico"></span></a> <a href="/promo/resume" onmousedown="this.href = appendParamsOnce( this.href, '?from=serptop&subfrom=resprmrtop&trk.origin=jobsearch&trk.variant=resprmrtop&trk.tk=18m0tpcc30nkh2pu')"><b>Post your resume</b></a> - It only takes a few seconds</div>
+=======
+<div id="searchCount">Jobs 1 to 10 of 187</div>
+<div id="resumePromo"><a href="/promo/resume" onmousedown="this.href = appendParamsOnce( this.href, '?from=serptop&subfrom=resprmrtop&trk.origin=jobsearch&trk.variant=resprmrtop&trk.tk=18ksolc0d19t14u1')"><span class="ico"></span></a> <a href="/promo/resume" onmousedown="this.href = appendParamsOnce( this.href, '?from=serptop&subfrom=resprmrtop&trk.origin=jobsearch&trk.variant=resprmrtop&trk.tk=18ksolc0d19t14u1')"><b>Post your resume</b></a> - It only takes a few seconds</div>
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 
 
 
@@ -1403,6 +1489,7 @@ color: #666666;
 
 
 <script type="text/javascript">
+<<<<<<< HEAD
 window['sjl'] = "Sco2PaGn";
 
 </script>
@@ -1416,6 +1503,21 @@ window['sjl'] = "Sco2PaGn";
 .Mq3O9NVwwfw { margin-bottom: 9px; }
 .LiI9jOtLHq .brdr,
 .Mq3O9NVwwfw .brdr { margin-bottom: 9px; margin-top: 9px; }
+=======
+window['sjl'] = "IozwTujJ1";
+
+</script>
+<style type="text/css">
+.IozwTujJ1 { margin: 0 0 6px 0; padding: 0; _zoom:100%; border: 0; background-color: #fff; }
+.IozwTujJ1 .jobtitle { white-space: nowrap; float:@LINE_START@; _float: none; }
+.IozwTujJ1 .sdn { color: #CD29C0; }
+.Kry1rTL5d .brdr { margin-top: 12px; }
+.YaodeLd .brdr { margin-bottom: 12px; }
+@media only screen and (min-height:780px) {
+.Kry1rTL5d { margin-bottom: 9px; }
+.YaodeLd .brdr,
+.Kry1rTL5d .brdr { margin-bottom: 9px; margin-top: 9px; }
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 }
 </style>
 <div></div>
@@ -1463,7 +1565,11 @@ window['sjl'] = "Sco2PaGn";
 
 
 
+<<<<<<< HEAD
 <div class="Sco2PaGn Mq3O9NVwwfw">
+=======
+<div class="IozwTujJ1 Kry1rTL5d">
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 
 
 <div class="row " data-jk="2909cad93b30d5a7">
@@ -1473,7 +1579,11 @@ window['sjl'] = "Sco2PaGn";
 
 
 
+<<<<<<< HEAD
 <a target="_blank" id="sja1" class=jobtitle href="/pagead/clk?mo=r&ad=-6NYlbfkN0DquM7qG6cM0TjgcU6bky6QZJjDqE3WvkusDaFIsG9jxViZELw-k02SevmlhPYKEQv2YYJILxDtZomQbGQNZY--m6Ydy8yKK9g0d_h0YHW4-1RYcz1zkvEjVcUcJpztJb0xIj9FoQ2NPlQPAtKj-0fZpm5eU6IIN_ofrp5U8VPJ1MGNHbeIUsf94nsQQt86XVuf9S4MPtS0Qz3XLAoMyJGmFkX6l5b7SnOnT1QxTe0HvNImDsc4t1j-aENyrT15pXgpp9tIb1sbAeXt8tn2MdPf1mnWR_NVI07hl6mirnGLukNmR6VBbX8hN5ARWowbKMOgPybOmnQRvtkQUgPuRBqZEaO9rv90fF-ZmfvtlbNkm4uwxYlMn-pRCHbw2o91u24YrovVQkT7HVFGz6GS-huNQJLKBLN4cpTEmOfCmfq6Rc4kOzn3wSWWsoGXtByH57DMDchTIA831w==&p=1&sk=fbbbdbd76b688a7d" title="Litigation Assistant" rel="nofollow" onmousedown="sjomd('sja1'); clk('sja1');" onclick="logFocus(); sjoc('sja1'); convCtr('SJ', pingUrlsForGA)">Litigation <b>Assistant</b></a>
+=======
+<a target="_blank" id="sja1" class=jobtitle href="/pagead/clk?mo=r&ad=-6NYlbfkN0Cj4qXf8Uz0dWUWzhZjsYVRMTa2fm_mNah12DGNoFQr5LLHkdnB50aHMUGHSszlngL47rqIzCawoFDgE34hS7r67n-eh2VKIvY3f-wtj8vYT1uWWpQ_VXMF1zoMS2yOy6ZWZVEelimrEBPPQJBj0GWAAvgCZCJp8-7zOXT5D6dzWaI2JLmYC_mPfz_6rphBJWQBcBQ95-QiM3vWwarFmCSsiVIgSW7fO5CPAADBnGYPCYOBhI9Tk0XH8-7LYbUE9A9hMn6y_ch6xojG6r4poQq6G1YPKp1nukbs7yj0yupHAWDC0sFKhxudGImyX8RkjyNUwJs8XbDbwTZUH93O4qNqgySCBdiHOw4348EweO968oAt7B3Hb_5Q0y-mLB4d6ptQ94BhNO3b83QfGeMnno6YEwNcvQkVgnsahLuBtIg9RVlfeXTRxUNfG8fxmI2wDWE=&p=1&sk=fbbbdbd76b688a7d" title="Assistant Sales Managers - Toronto Area" rel="nofollow" onmousedown="sjomd('sja1'); clk('sja1');" onclick="logFocus(); sjoc('sja1'); convCtr('SJ', pingUrlsForGA)"><b>Assistant</b> Sales Managers - Toronto Area</a>
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 
 
 
@@ -1513,7 +1623,11 @@ window['sjl'] = "Sco2PaGn";
 
 
 
+<<<<<<< HEAD
 <a target="_blank" id="sja2" class=jobtitle href="/pagead/clk?mo=r&ad=-6NYlbfkN0BfNh7s7aYI3uWLgRPr2kk4XkkNK39ShlqBTaimU5b0PLK2mgvwiLvObhwc05ALHrBY7bpfxECg6-iUTC8aPlnNdEHWXpd1hIbZbkc7OlCTfc_AgsSZi1-MJf2uyRyveirD1IwRyN12tbJz3w-9OLn-DPpz1Y1ntNK2ou6XJY-HA54BUyroT0M5uFDoWOkkrNYqk_8ftPuDYJ3wYtdv6ki4W0d7wDM6PVxcpiBzPuEnJewD24bmDN07trNNbGvtp2SWgMzOiq0f-R4AJf2-4Bhl7GPcuqLJ2PuB4ZuyxtD5cPaI4M8QypyErzlaeqoqJZ8ZT2L80sslybfXIIE3ZdSC21Sj5zepPbxQcgahkVjcpsOJg3pYRS6K8ETf6KkdWBzfJmV3xL1XRwwlPlb1AhlH&p=2&sk=fbbbdbd76b688a7d" title="Franchise Process Coordinator" rel="nofollow" onmousedown="sjomd('sja2'); clk('sja2');" onclick="logFocus(); sjoc('sja2'); convCtr('SJ', pingUrlsForGA)">Franchise Process Coordinator</a>
+=======
+<a target="_blank" id="sja2" class=jobtitle href="/pagead/clk?mo=r&ad=-6NYlbfkN0DzpJyzExHu7GAeoBImGPmHukiXmr2xsWLKORMcXUkwCaxELhxrMsWnnVjlJhSF9cZ7RffuzMLrMSGb5qga0zCg0b29tzg9j3JGjyrCh-qOodn_KVBH-r7h2Zf90Lu03IBgF_WBQ-Wus_va9XeaB2RMigghTQ9XxBCAoeDcA4FpTrpYZMYFwcLbYgMtUKjQlmIUzRgXeZVSQ0x2s4cwfbTV-VZO6LKqx4kf1bdfrlyOh0kGGJxarjzhjTGfG3cAYADjTC9vESDghjxednjV7eqk92OBtCUIosk-uKfprYqEKEHU2WAI8K4JDzxFFr4O2w4iciI76eQjnxz3-VeoCztrRC6M9YJWJG_AUFUtn2mEfEn7pY3sgAoT89CYDJK7FaqPpRuoSRBoKBQx9B5Q8lcQ7jwn_m7_zvwmrb8yCjGNTfL32arflYMT4TQ95c85jrXg-I0nReTvO_vnPeKGrujXr-8aNcz42eTOzpWEMlBMJ9jzncOmhm9EWJvWQ8JMeM42-TjMYFK6vfODXmDPQ1TXvg0tn7sD2uuvERkEHe2wuA==&p=2&sk=fbbbdbd76b688a7d" title="Business Assistant, Regulatory Services" rel="nofollow" onmousedown="sjomd('sja2'); clk('sja2');" onclick="logFocus(); sjoc('sja2'); convCtr('SJ', pingUrlsForGA)">Business <b>Assistant</b>, Regulatory Services</a>
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 
 
 
@@ -1645,7 +1759,11 @@ window['sjl'] = "Sco2PaGn";
         
             
                 <a href="/jobs?q=hr+assistant&l=Toronto%2C+ON">
+<<<<<<< HEAD
                     all 190 jobs
+=======
+                    all 187 jobs
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
                 </a>
             
             
@@ -1918,7 +2036,11 @@ title="Save this job to my.indeed">save job</a> -
 
 
 
+<<<<<<< HEAD
 <span id="block_18483021b2df5da5" class=""><a href="#block_job0" class="sl resultLink"
+=======
+<span id="block_3fdc512a804389f8" class="hidden"><a href="#block_job0" class="sl resultLink"
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 onclick="blockJobsLabel( this, jobmap[0], false ); toggleResultTab( this, 'block_job0', 0 ); return false;">block</a> - </span>
 
 <a href="mailto:?subject=I found this job on Indeed.com&body=http://ca.indeed.com/viewjob?jk=18483021b2df5da5"
@@ -1928,11 +2050,19 @@ if ( !hasAjax() ) { return; }
 toggle_email_job_content( this, 0,
 {
 'a': 'tellafriend',
+<<<<<<< HEAD
 'tk' : '18m0tpcc30nkh2pu',
 'jobkey': '18483021b2df5da5',
 'q': 'hr assistant',
 'permalink': 'http:\/\/ca.indeed.com\/viewjob?jk=18483021b2df5da5',
 'sbt': 'ceca70fcc3a62ad992eb1e5d3873123a',
+=======
+'tk' : '18ksolc0d19t14u1',
+'jobkey': '3fdc512a804389f8',
+'q': 'hr assistant',
+'permalink': 'http:\/\/ca.indeed.com\/viewjob?jk=3fdc512a804389f8',
+'sbt': 'c1e6c0f7e09ad38336c895392706a37f',
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 'fromEmail': window['tellFriendEmail']
 },
 false
@@ -1943,7 +2073,11 @@ email</a>
 
 -
 <a href="#" id="tog_0" class="sl resultLink"
+<<<<<<< HEAD
 onmousedown="if ( window.rpc ) { rpc('/rpc/log?a=opma&tk=18m0tpcc30nkh2pu&p=0&ts=1398043095427'); this.onmousedown=null; }"
+=======
+onmousedown="if ( window.rpc ) { rpc('/rpc/log?a=opma&tk=18ksolc0d19t14u1&p=0&ts=1396829761549'); this.onmousedown=null; }"
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 onclick="toggle(jobmap[0]); toggleResultTab(this, 'more_0', 0);return false;">more...</a>
 
 </span>
@@ -2189,7 +2323,11 @@ title="Save this job to my.indeed">save job</a> -
 
 
 
+<<<<<<< HEAD
 <span id="block_92978472963467f4" class=""><a href="#block_job1" class="sl resultLink"
+=======
+<span id="block_3c023dca75a64f67" class="hidden"><a href="#block_job1" class="sl resultLink"
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 onclick="blockJobsLabel( this, jobmap[1], false ); toggleResultTab( this, 'block_job1', 1 ); return false;">block</a> - </span>
 
 <a href="mailto:?subject=I found this job on Indeed.com&body=http://ca.indeed.com/viewjob?jk=92978472963467f4"
@@ -2199,11 +2337,19 @@ if ( !hasAjax() ) { return; }
 toggle_email_job_content( this, 1,
 {
 'a': 'tellafriend',
+<<<<<<< HEAD
 'tk' : '18m0tpcc30nkh2pu',
 'jobkey': '92978472963467f4',
 'q': 'hr assistant',
 'permalink': 'http:\/\/ca.indeed.com\/viewjob?jk=92978472963467f4',
 'sbt': 'ceca70fcc3a62ad992eb1e5d3873123a',
+=======
+'tk' : '18ksolc0d19t14u1',
+'jobkey': '3c023dca75a64f67',
+'q': 'hr assistant',
+'permalink': 'http:\/\/ca.indeed.com\/viewjob?jk=3c023dca75a64f67',
+'sbt': 'c1e6c0f7e09ad38336c895392706a37f',
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 'fromEmail': window['tellFriendEmail']
 },
 false
@@ -2214,7 +2360,11 @@ email</a>
 
 -
 <a href="#" id="tog_1" class="sl resultLink"
+<<<<<<< HEAD
 onmousedown="if ( window.rpc ) { rpc('/rpc/log?a=opma&tk=18m0tpcc30nkh2pu&p=1&ts=1398043095427'); this.onmousedown=null; }"
+=======
+onmousedown="if ( window.rpc ) { rpc('/rpc/log?a=opma&tk=18ksolc0d19t14u1&p=1&ts=1396829761549'); this.onmousedown=null; }"
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 onclick="toggle(jobmap[1]); toggleResultTab(this, 'more_1', 1);return false;">more...</a>
 
 </span>
@@ -2396,6 +2546,13 @@ title="HUMAN RESOURCES/PAYROLL ASSISTANT">HUMAN RESOURCES/PAYROLL <b>ASSISTANT</
 
 
 
+<<<<<<< HEAD
+=======
+<span
+class=date>4 days ago</span>
+<span id="tt_set_2"
+class=tt_set>
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 
 
 
@@ -2435,8 +2592,38 @@ title="HUMAN RESOURCES/PAYROLL ASSISTANT">HUMAN RESOURCES/PAYROLL <b>ASSISTANT</
 
 
 
+<<<<<<< HEAD
 
 
+=======
+<span id="block_a1a8ea93e60bac95" class="hidden"><a href="#block_job2" class="sl resultLink"
+onclick="blockJobsLabel( this, jobmap[2], false ); toggleResultTab( this, 'block_job2', 2 ); return false;">block</a> - </span>
+
+<a href="mailto:?subject=I found this job on Indeed.com&body=http://ca.indeed.com/viewjob?jk=a1a8ea93e60bac95"
+class="sl resultLink"
+onclick="
+if ( !hasAjax() ) { return; }
+toggle_email_job_content( this, 2,
+{
+'a': 'tellafriend',
+'tk' : '18ksolc0d19t14u1',
+'jobkey': 'a1a8ea93e60bac95',
+'q': 'hr assistant',
+'permalink': 'http:\/\/ca.indeed.com\/viewjob?jk=a1a8ea93e60bac95',
+'sbt': 'c1e6c0f7e09ad38336c895392706a37f',
+'fromEmail': window['tellFriendEmail']
+},
+false
+);
+toggleResultTab(this, 'email_job_content_2', 2);
+return false;">
+email</a>
+
+-
+<a href="#" id="tog_2" class="sl resultLink"
+onmousedown="if ( window.rpc ) { rpc('/rpc/log?a=opma&tk=18ksolc0d19t14u1&p=2&ts=1396829761549'); this.onmousedown=null; }"
+onclick="toggle(jobmap[2]); toggleResultTab(this, 'more_2', 2);return false;">more...</a>
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 
 
 
@@ -2780,7 +2967,11 @@ title="Save this job to my.indeed">save job</a> -
 
 
 
+<<<<<<< HEAD
 <span id="block_ec7f98dd99e120cf" class=""><a href="#block_job3" class="sl resultLink"
+=======
+<span id="block_98082c5b9475a245" class="hidden"><a href="#block_job3" class="sl resultLink"
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 onclick="blockJobsLabel( this, jobmap[3], false ); toggleResultTab( this, 'block_job3', 3 ); return false;">block</a> - </span>
 
 <a href="mailto:?subject=I found this job on Indeed.com&body=http://ca.indeed.com/viewjob?jk=ec7f98dd99e120cf"
@@ -2790,11 +2981,19 @@ if ( !hasAjax() ) { return; }
 toggle_email_job_content( this, 3,
 {
 'a': 'tellafriend',
+<<<<<<< HEAD
 'tk' : '18m0tpcc30nkh2pu',
 'jobkey': 'ec7f98dd99e120cf',
 'q': 'hr assistant',
 'permalink': 'http:\/\/ca.indeed.com\/viewjob?jk=ec7f98dd99e120cf',
 'sbt': 'ceca70fcc3a62ad992eb1e5d3873123a',
+=======
+'tk' : '18ksolc0d19t14u1',
+'jobkey': '98082c5b9475a245',
+'q': 'hr assistant',
+'permalink': 'http:\/\/ca.indeed.com\/viewjob?jk=98082c5b9475a245',
+'sbt': 'c1e6c0f7e09ad38336c895392706a37f',
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 'fromEmail': window['tellFriendEmail']
 },
 false
@@ -2805,7 +3004,11 @@ email</a>
 
 -
 <a href="#" id="tog_3" class="sl resultLink"
+<<<<<<< HEAD
 onmousedown="if ( window.rpc ) { rpc('/rpc/log?a=opma&tk=18m0tpcc30nkh2pu&p=3&ts=1398043095427'); this.onmousedown=null; }"
+=======
+onmousedown="if ( window.rpc ) { rpc('/rpc/log?a=opma&tk=18ksolc0d19t14u1&p=3&ts=1396829761549'); this.onmousedown=null; }"
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 onclick="toggle(jobmap[3]); toggleResultTab(this, 'more_3', 3);return false;">more...</a>
 
 </span>
@@ -3066,7 +3269,11 @@ title="Save this job to my.indeed">save job</a> -
 
 
 
+<<<<<<< HEAD
 <span id="block_3c023dca75a64f67" class=""><a href="#block_job4" class="sl resultLink"
+=======
+<span id="block_6e612251a4451d4f" class="hidden"><a href="#block_job4" class="sl resultLink"
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 onclick="blockJobsLabel( this, jobmap[4], false ); toggleResultTab( this, 'block_job4', 4 ); return false;">block</a> - </span>
 
 <a href="mailto:?subject=I found this job on Indeed.com&body=http://ca.indeed.com/viewjob?jk=3c023dca75a64f67"
@@ -3076,11 +3283,19 @@ if ( !hasAjax() ) { return; }
 toggle_email_job_content( this, 4,
 {
 'a': 'tellafriend',
+<<<<<<< HEAD
 'tk' : '18m0tpcc30nkh2pu',
 'jobkey': '3c023dca75a64f67',
 'q': 'hr assistant',
 'permalink': 'http:\/\/ca.indeed.com\/viewjob?jk=3c023dca75a64f67',
 'sbt': 'ceca70fcc3a62ad992eb1e5d3873123a',
+=======
+'tk' : '18ksolc0d19t14u1',
+'jobkey': '6e612251a4451d4f',
+'q': 'hr assistant',
+'permalink': 'http:\/\/ca.indeed.com\/viewjob?jk=6e612251a4451d4f',
+'sbt': 'c1e6c0f7e09ad38336c895392706a37f',
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 'fromEmail': window['tellFriendEmail']
 },
 false
@@ -3091,7 +3306,11 @@ email</a>
 
 -
 <a href="#" id="tog_4" class="sl resultLink"
+<<<<<<< HEAD
 onmousedown="if ( window.rpc ) { rpc('/rpc/log?a=opma&tk=18m0tpcc30nkh2pu&p=4&ts=1398043095427'); this.onmousedown=null; }"
+=======
+onmousedown="if ( window.rpc ) { rpc('/rpc/log?a=opma&tk=18ksolc0d19t14u1&p=4&ts=1396829761549'); this.onmousedown=null; }"
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 onclick="toggle(jobmap[4]); toggleResultTab(this, 'more_4', 4);return false;">more...</a>
 
 </span>
@@ -3390,7 +3609,11 @@ title="Save this job to my.indeed">save job</a> -
 
 
 
+<<<<<<< HEAD
 <span id="block_2e99dc3e961ba132" class=""><a href="#block_job5" class="sl resultLink"
+=======
+<span id="block_c4ddbd30ad263911" class="hidden"><a href="#block_job5" class="sl resultLink"
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 onclick="blockJobsLabel( this, jobmap[5], false ); toggleResultTab( this, 'block_job5', 5 ); return false;">block</a> - </span>
 
 <a href="mailto:?subject=I found this job on Indeed.com&body=http://ca.indeed.com/viewjob?jk=2e99dc3e961ba132"
@@ -3400,11 +3623,19 @@ if ( !hasAjax() ) { return; }
 toggle_email_job_content( this, 5,
 {
 'a': 'tellafriend',
+<<<<<<< HEAD
 'tk' : '18m0tpcc30nkh2pu',
 'jobkey': '2e99dc3e961ba132',
 'q': 'hr assistant',
 'permalink': 'http:\/\/ca.indeed.com\/viewjob?jk=2e99dc3e961ba132',
 'sbt': 'ceca70fcc3a62ad992eb1e5d3873123a',
+=======
+'tk' : '18ksolc0d19t14u1',
+'jobkey': 'c4ddbd30ad263911',
+'q': 'hr assistant',
+'permalink': 'http:\/\/ca.indeed.com\/viewjob?jk=c4ddbd30ad263911',
+'sbt': 'c1e6c0f7e09ad38336c895392706a37f',
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 'fromEmail': window['tellFriendEmail']
 },
 false
@@ -3415,7 +3646,11 @@ email</a>
 
 -
 <a href="#" id="tog_5" class="sl resultLink"
+<<<<<<< HEAD
 onmousedown="if ( window.rpc ) { rpc('/rpc/log?a=opma&tk=18m0tpcc30nkh2pu&p=5&ts=1398043095427'); this.onmousedown=null; }"
+=======
+onmousedown="if ( window.rpc ) { rpc('/rpc/log?a=opma&tk=18ksolc0d19t14u1&p=5&ts=1396829761549'); this.onmousedown=null; }"
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 onclick="toggle(jobmap[5]); toggleResultTab(this, 'more_5', 5);return false;">more...</a>
 
 </span>
@@ -3676,7 +3911,11 @@ title="Save this job to my.indeed">save job</a> -
 
 
 
+<<<<<<< HEAD
 <span id="block_659cc5d71491db04" class=""><a href="#block_job6" class="sl resultLink"
+=======
+<span id="block_7c930f67e0506168" class="hidden"><a href="#block_job6" class="sl resultLink"
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 onclick="blockJobsLabel( this, jobmap[6], false ); toggleResultTab( this, 'block_job6', 6 ); return false;">block</a> - </span>
 
 <a href="mailto:?subject=I found this job on Indeed.com&body=http://ca.indeed.com/viewjob?jk=659cc5d71491db04"
@@ -3686,11 +3925,19 @@ if ( !hasAjax() ) { return; }
 toggle_email_job_content( this, 6,
 {
 'a': 'tellafriend',
+<<<<<<< HEAD
 'tk' : '18m0tpcc30nkh2pu',
 'jobkey': '659cc5d71491db04',
 'q': 'hr assistant',
 'permalink': 'http:\/\/ca.indeed.com\/viewjob?jk=659cc5d71491db04',
 'sbt': 'ceca70fcc3a62ad992eb1e5d3873123a',
+=======
+'tk' : '18ksolc0d19t14u1',
+'jobkey': '7c930f67e0506168',
+'q': 'hr assistant',
+'permalink': 'http:\/\/ca.indeed.com\/viewjob?jk=7c930f67e0506168',
+'sbt': 'c1e6c0f7e09ad38336c895392706a37f',
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 'fromEmail': window['tellFriendEmail']
 },
 false
@@ -3701,7 +3948,11 @@ email</a>
 
 -
 <a href="#" id="tog_6" class="sl resultLink"
+<<<<<<< HEAD
 onmousedown="if ( window.rpc ) { rpc('/rpc/log?a=opma&tk=18m0tpcc30nkh2pu&p=6&ts=1398043095427'); this.onmousedown=null; }"
+=======
+onmousedown="if ( window.rpc ) { rpc('/rpc/log?a=opma&tk=18ksolc0d19t14u1&p=6&ts=1396829761549'); this.onmousedown=null; }"
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 onclick="toggle(jobmap[6]); toggleResultTab(this, 'more_6', 6);return false;">more...</a>
 
 </span>
@@ -4000,7 +4251,11 @@ title="Save this job to my.indeed">save job</a> -
 
 
 
+<<<<<<< HEAD
 <span id="block_62f76a2fa6e88125" class=""><a href="#block_job7" class="sl resultLink"
+=======
+<span id="block_934feb07ad772e37" class="hidden"><a href="#block_job7" class="sl resultLink"
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 onclick="blockJobsLabel( this, jobmap[7], false ); toggleResultTab( this, 'block_job7', 7 ); return false;">block</a> - </span>
 
 <a href="mailto:?subject=I found this job on Indeed.com&body=http://ca.indeed.com/viewjob?jk=62f76a2fa6e88125"
@@ -4010,11 +4265,19 @@ if ( !hasAjax() ) { return; }
 toggle_email_job_content( this, 7,
 {
 'a': 'tellafriend',
+<<<<<<< HEAD
 'tk' : '18m0tpcc30nkh2pu',
 'jobkey': '62f76a2fa6e88125',
 'q': 'hr assistant',
 'permalink': 'http:\/\/ca.indeed.com\/viewjob?jk=62f76a2fa6e88125',
 'sbt': 'ceca70fcc3a62ad992eb1e5d3873123a',
+=======
+'tk' : '18ksolc0d19t14u1',
+'jobkey': '934feb07ad772e37',
+'q': 'hr assistant',
+'permalink': 'http:\/\/ca.indeed.com\/viewjob?jk=934feb07ad772e37',
+'sbt': 'c1e6c0f7e09ad38336c895392706a37f',
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 'fromEmail': window['tellFriendEmail']
 },
 false
@@ -4025,7 +4288,11 @@ email</a>
 
 -
 <a href="#" id="tog_7" class="sl resultLink"
+<<<<<<< HEAD
 onmousedown="if ( window.rpc ) { rpc('/rpc/log?a=opma&tk=18m0tpcc30nkh2pu&p=7&ts=1398043095427'); this.onmousedown=null; }"
+=======
+onmousedown="if ( window.rpc ) { rpc('/rpc/log?a=opma&tk=18ksolc0d19t14u1&p=7&ts=1396829761549'); this.onmousedown=null; }"
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 onclick="toggle(jobmap[7]); toggleResultTab(this, 'more_7', 7);return false;">more...</a>
 
 </span>
@@ -4328,7 +4595,11 @@ title="Save this job to my.indeed">save job</a> -
 
 
 
+<<<<<<< HEAD
 <span id="block_b71c312a927ad98e" class=""><a href="#block_job8" class="sl resultLink"
+=======
+<span id="block_4ea6df978fd61d67" class="hidden"><a href="#block_job8" class="sl resultLink"
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 onclick="blockJobsLabel( this, jobmap[8], false ); toggleResultTab( this, 'block_job8', 8 ); return false;">block</a> - </span>
 
 <a href="mailto:?subject=I found this job on Indeed.com&body=http://ca.indeed.com/viewjob?jk=b71c312a927ad98e"
@@ -4338,11 +4609,19 @@ if ( !hasAjax() ) { return; }
 toggle_email_job_content( this, 8,
 {
 'a': 'tellafriend',
+<<<<<<< HEAD
 'tk' : '18m0tpcc30nkh2pu',
 'jobkey': 'b71c312a927ad98e',
 'q': 'hr assistant',
 'permalink': 'http:\/\/ca.indeed.com\/viewjob?jk=b71c312a927ad98e',
 'sbt': 'ceca70fcc3a62ad992eb1e5d3873123a',
+=======
+'tk' : '18ksolc0d19t14u1',
+'jobkey': '4ea6df978fd61d67',
+'q': 'hr assistant',
+'permalink': 'http:\/\/ca.indeed.com\/viewjob?jk=4ea6df978fd61d67',
+'sbt': 'c1e6c0f7e09ad38336c895392706a37f',
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 'fromEmail': window['tellFriendEmail']
 },
 false
@@ -4353,7 +4632,11 @@ email</a>
 
 -
 <a href="#" id="tog_8" class="sl resultLink"
+<<<<<<< HEAD
 onmousedown="if ( window.rpc ) { rpc('/rpc/log?a=opma&tk=18m0tpcc30nkh2pu&p=8&ts=1398043095427'); this.onmousedown=null; }"
+=======
+onmousedown="if ( window.rpc ) { rpc('/rpc/log?a=opma&tk=18ksolc0d19t14u1&p=8&ts=1396829761549'); this.onmousedown=null; }"
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 onclick="toggle(jobmap[8]); toggleResultTab(this, 'more_8', 8);return false;">more...</a>
 
 </span>
@@ -4655,7 +4938,11 @@ title="Save this job to my.indeed">save job</a> -
 
 
 
+<<<<<<< HEAD
 <span id="block_9afae3f0c258cd75" class=""><a href="#block_job9" class="sl resultLink"
+=======
+<span id="block_e2a6067157ab9fe8" class="hidden"><a href="#block_job9" class="sl resultLink"
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 onclick="blockJobsLabel( this, jobmap[9], false ); toggleResultTab( this, 'block_job9', 9 ); return false;">block</a> - </span>
 
 <a href="mailto:?subject=I found this job on Indeed.com&body=http://ca.indeed.com/viewjob?jk=9afae3f0c258cd75"
@@ -4665,11 +4952,19 @@ if ( !hasAjax() ) { return; }
 toggle_email_job_content( this, 9,
 {
 'a': 'tellafriend',
+<<<<<<< HEAD
 'tk' : '18m0tpcc30nkh2pu',
 'jobkey': '9afae3f0c258cd75',
 'q': 'hr assistant',
 'permalink': 'http:\/\/ca.indeed.com\/viewjob?jk=9afae3f0c258cd75',
 'sbt': 'ceca70fcc3a62ad992eb1e5d3873123a',
+=======
+'tk' : '18ksolc0d19t14u1',
+'jobkey': 'e2a6067157ab9fe8',
+'q': 'hr assistant',
+'permalink': 'http:\/\/ca.indeed.com\/viewjob?jk=e2a6067157ab9fe8',
+'sbt': 'c1e6c0f7e09ad38336c895392706a37f',
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 'fromEmail': window['tellFriendEmail']
 },
 false
@@ -4680,7 +4975,11 @@ email</a>
 
 -
 <a href="#" id="tog_9" class="sl resultLink"
+<<<<<<< HEAD
 onmousedown="if ( window.rpc ) { rpc('/rpc/log?a=opma&tk=18m0tpcc30nkh2pu&p=9&ts=1398043095427'); this.onmousedown=null; }"
+=======
+onmousedown="if ( window.rpc ) { rpc('/rpc/log?a=opma&tk=18ksolc0d19t14u1&p=9&ts=1396829761549'); this.onmousedown=null; }"
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 onclick="toggle(jobmap[9]); toggleResultTab(this, 'more_9', 9);return false;">more...</a>
 
 </span>
@@ -4719,6 +5018,44 @@ View all <a href="/Rbc-jobs" rel="nofollow">RBC jobs</a> - <a href="/jobs-in-Tor
 
 
 
+<<<<<<< HEAD
+=======
+</ul>
+<div id="options_9"></div>
+
+</div>
+
+
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div></div>
+<div class="IozwTujJ1 YaodeLd">
+<div class="brdr"><!-- --></div>
+
+<div class="row sjlast">
+
+
+
+
+
+
+<a target="_blank" id="sja3" class=jobtitle href="/pagead/clk?mo=r&ad=-6NYlbfkN0DzpJyzExHu7GAeoBImGPmHukiXmr2xsWLKORMcXUkwCaxELhxrMsWnnVjlJhSF9caXU7dkq2rZ_7JxZBtpuom0dTAyErKGgTHB2J-D-0le9ioO0s_fgCZCgKf3SgA9pFjEKnHdGnOyqEmDV5eYfb_5-JI41bY0yen0kAAoRyg95R51DIZrMWpjG8OMpq-XHdXVr-ENi-rsmtb4i9XeDHYAoWI7c_eZ3xw8XUcQnE_T6gCRdA7sT9pUOixKujzkzAPKFA_vn04EnVGV_Pcc6Stsn-_XBheeqVFU2gRP1fSnSl0RDGFgQogUJfXiaN_4j2J06ptrLg0cpjXqd6TALHqFuMtKTmq8OXZuWz1TWx99buOqfjWU2kL4sg5bJBEQVDOjqGgfPbwnLvSoyPjR-o4YsXT_cOsQdEDT-XROC5zNQa4P0sm5fI3VowzJg6gA8__TdNBEqay9cYHSxQ_r27unCHnjzh_FchvWTRwd0bTUqCwrVnyWqYSayuiD6UAPjcOFYB54-4Osa6awtEQdrl8Ya0AgvXqL2Qi9GdtvZm-1FQ==&p=3&sk=fbbbdbd76b688a7d" title="Human Resources Assistant - Law Firm (Job ID #1868)" rel="nofollow" onmousedown="sjomd('sja3'); clk('sja3');" onclick="logFocus(); sjoc('sja3'); convCtr('SJ', pingUrlsForGA)">Human Resources <b>Assistant</b> - Law Firm (Job ID #1868)</a>
+
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 
 
 
@@ -4814,14 +5151,22 @@ href="/cmp/Rbc-Bank">RBC</a></span>
 
 
 
+<<<<<<< HEAD
 <form action="/alert" method=POST onsubmit="return addalert('hr+assistant','Toronto%2C+ON','b','',this.email.value,'18m0tpcc30nkh2pu', this.verified.value, false, '');">
+=======
+<form action="/alert" method=POST onsubmit="return addalert('hr+assistant','Toronto%2C+ON','b','',this.email.value,'18ksolc0d19t14u1', this.verified.value, false, '');">
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 <input type=hidden name=a value="add">
 <input type=hidden name=q value="hr assistant">
 <input type=hidden name=l value="Toronto, ON">
 <input type=hidden name=radius value="50">
 <input type=hidden name=noscript value="1">
 <input type=hidden name=fr value="b">
+<<<<<<< HEAD
 <input type=hidden name=tk value="18m0tpcc30nkh2pu">
+=======
+<input type=hidden name=tk value="18ksolc0d19t14u1">
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 <input id="balertverified" type=hidden name=verified value="0">
 <input type=hidden name=alertparams value="">
 <label for="balertemail">My email:</label> <input type=text id="balertemail" name=email value="" size=25 maxlength=100>
@@ -4905,7 +5250,11 @@ href="/cmp/Rbc-Bank">RBC</a></span>
 
 
 <script type="text/javascript">
+<<<<<<< HEAD
 function ptk(st,p) {document.cookie = 'PTK="tk=18m0tpcc30nkh2pu&type=jobsearch&subtype='+st+(p?'&'+p:'')+'"; path=/';}
+=======
+function ptk(st,p) {document.cookie = 'PTK="tk=18ksolc0d19t14u1&type=jobsearch&subtype='+st+(p?'&'+p:'')+'"; path=/';}
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 </script>
 
 <script type="text/javascript">
@@ -5006,14 +5355,22 @@ return true;
 
 
 
+<<<<<<< HEAD
 <form action="/alert" method=POST onsubmit="return addalert('hr+assistant','Toronto%2C+ON','t','',this.email.value,'18m0tpcc30nkh2pu', this.verified.value, false, '');">
+=======
+<form action="/alert" method=POST onsubmit="return addalert('hr+assistant','Toronto%2C+ON','t','',this.email.value,'18ksolc0d19t14u1', this.verified.value, false, '');">
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 <input type=hidden name=a value="add">
 <input type=hidden name=q value="hr assistant">
 <input type=hidden name=l value="Toronto, ON">
 <input type=hidden name=radius value="50">
 <input type=hidden name=noscript value="1">
 <input type=hidden name=fr value="t">
+<<<<<<< HEAD
 <input type=hidden name=tk value="18m0tpcc30nkh2pu">
+=======
+<input type=hidden name=tk value="18ksolc0d19t14u1">
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 <input id="talertverified" type=hidden name=verified value="0">
 <input type=hidden name=alertparams value="">
 <label for="talertemail">My email:</label> <input type=text id="talertemail" name=email value="" size=25 maxlength=100>
@@ -5615,10 +5972,17 @@ font-size: 9pt;
 
 <script type="text/javascript">
 <!--
+<<<<<<< HEAD
 (function ( tk ) { if ( tk && document.images ) { var s="/", q="?", a="&", e="="; rpc(s+"rpc"+s+"log"+q+"a"+e+"jsv"+a+"tk"+e+tk); } })('18m0tpcc30nkh2pu');
 function jsall_loaded() {
 
 attachSjBlock('18m0tpcc30nkh2pu');
+=======
+(function ( tk ) { if ( tk && document.images ) { var s="/", q="?", a="&", e="="; rpc(s+"rpc"+s+"log"+q+"a"+e+"jsv"+a+"tk"+e+tk); } })('18ksolc0d19t14u1');
+function jsall_loaded() {
+
+attachSjBlock('18ksolc0d19t14u1');
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 }
 if (window['closureReady'] === true) {
 jsall_loaded();
@@ -5666,11 +6030,19 @@ try {
 new google.ads.search.Ads(
     {
         "pubId": "indeed-na-ca_js",
+<<<<<<< HEAD
         "channel": '9637754242+8802932321+1000000310+5707238999+1000000059+afs-SJmin0+kwexprev4+ggltxttst1+iPad_ads1+afs-SJ1',
         
 
         "query": "hr assistant work careers Toronto, ON",
         "queryContext": "work careers",
+=======
+        "channel": '9637754242+8802932321+1000000317+5707238999+8454339112+afs-SJmin0+kwexprev4+ggltxttst1+iPad_ads1+afs-SJ2',
+        
+
+        "query": "hr assistant Employment opportunity Toronto, ON",
+        "queryContext": "Employment opportunity",
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
         "gl": "ca",
         "adPage": "1",
         "hl": "en",
@@ -5756,9 +6128,15 @@ var adUnitsRequested = {};
 adUnitsRequested["bottomadsense"] = {"logName":"bot","estimateImps":0,"logProperty":null};
 adUnitsRequested["sideadsense"] = {"logName":"right","estimateImps":0,"logProperty":null};
 recordAdsenseImpressions(
+<<<<<<< HEAD
         "hr assistant work careers Toronto, ON",
         13,
         "9637754242,8802932321,1000000310,5707238999,1000000059,afs-SJmin0,kwexprev4,ggltxttst1,iPad_ads1,afs-SJ1",
+=======
+        "hr assistant Employment opportunity Toronto, ON",
+        10,
+        "9637754242,8802932321,1000000317,5707238999,8454339112,afs-SJmin0,kwexprev4,ggltxttst1,iPad_ads1,afs-SJ2",
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
         "en",
         adUnitsRequested
 );
@@ -5885,11 +6263,19 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 
 <script>
 var _comscore = _comscore || [];
+<<<<<<< HEAD
 _comscore.push({ c1: "2", c2: "6486505", c4:"ca.indeed.com/jobs", c15:"18m0tpcc20nkh483"});
 (function() { var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true; s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js"; el.parentNode.insertBefore(s, el); })();
 </script>
 <noscript>
 <img src="http://b.scorecardresearch.com/p?c1=2&c2=6486505&c4=ca.indeed.com%2Fjobs&c15=18m0tpcc20nkh483&cv=2.0&cj=1" style="display:none" width="0" height="0" alt=""/>
+=======
+_comscore.push({ c1: "2", c2: "6486505", c4:"ca.indeed.com/jobs", c15:"18ksolc0c19t11kl"});
+(function() { var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true; s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js"; el.parentNode.insertBefore(s, el); })();
+</script>
+<noscript>
+<img src="http://b.scorecardresearch.com/p?c1=2&c2=6486505&c4=ca.indeed.com%2Fjobs&c15=18ksolc0c19t11kl&cv=2.0&cj=1" style="display:none" width="0" height="0" alt=""/>
+>>>>>>> a4d9dad843a995e8a85be5b40392affa4bda8f87
 </noscript>
 
 
