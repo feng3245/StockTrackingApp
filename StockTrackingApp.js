@@ -2,12 +2,9 @@ scrappedData = new Meteor.Collection("ScrappedData");
 applicationUID = undefined;
 
 if (Meteor.isClient) {
-  Template.hello.greeting = function () {
-    return "Welcome to StockTrackingApp.";
-  };
-
-  Template.hello.events({
-    'click input' : function () {
+  
+  Template.SearchJobs.events({
+    'click #JobSearch' : function () {
       // template data, if any, is available in 'this'
       if (typeof console !== 'undefined')
       {
@@ -16,13 +13,53 @@ if (Meteor.isClient) {
           Session.set("applicationUID", Meteor.uuid());
           applicationUID = Session.get("applicationUID");
         }
+
         Meteor.call("serverAppIDSync", applicationUID);
-        scrappedData.insert({category:"jobSearchData", appId:applicationUID+""});
-        console.log(applicationUID);
-        console.log(Session);
+        
+
+        scrappedData.insert({category:"jobSearchData", appId:applicationUID+"", jobTitle:Session.get("JobTitle"), city:Session.get("City"), province:Session.get("Province")});
+        
+        var displayFile = setInterval(
+          function()
+          {
+            if(scrappedData.findOne({category:"jobSearchResult", appId: applicationUID+""})!=undefined)
+            {
+                $("#Results").html(scrappedData.findOne({category:"jobSearchResult", appId: applicationUID+""}).data);
+                
+                clearInterval(displayFile);
+            }
+
+                
+          },100
+          );
+        //scrappedData.remove({category:"fileName", appId: applicationUID+""});
+        
       }
+    },
+    'focusout #JobTitle' : function(e,t)
+    {
+        Session.set("JobTitle", e.target.value);
+    },
+    'focusout #City' : function(e,t)
+    {
+        Session.set("City", e.target.value);
+    },
+    'focusout #Province' : function(e,t)
+    {
+        Session.set("Province", e.target.value);
     }
   });
+function downloadURL(url) {
+    var hiddenIFrameID = 'hiddenDownloader',
+        iframe = document.getElementById(hiddenIFrameID);
+    if (iframe === null) {
+        iframe = document.createElement('iframe');
+        iframe.id = hiddenIFrameID;
+        iframe.style.display = 'none';
+        document.body.appendChild(iframe);
+    }
+    iframe.src = url;
+};
 }
 
 if (Meteor.isServer) {
@@ -41,27 +78,43 @@ if (Meteor.isServer) {
   });
   Meteor.startup(function () {
     
-      Meteor.setInterval(function(){
-        if(typeof applicationUID!=undefined)
-          console.log(scrappedData.findOne({category:"jobSearchData", appId: applicationUID+""}));
-            if(scrappedData.findOne({category:"jobSearchData", appId:applicationUID+""}))
-              console.log("application synced");
-          },5000);
+      Meteor.setInterval(function()
+        {
+        if(applicationUID != undefined)
+          
+          var jobQuery = scrappedData.findOne({category:"jobSearchData", appId: applicationUID+""});
+            
+            if(jobQuery)
+              {
+                  scrappedData.remove({category:"jobSearchData", appId: applicationUID+""});
+                  var indeedHelper = new indeedSiteHelper(jobQuery.jobTitle, jobQuery.city, jobQuery.province);
+                  scrape(indeedHelper.getJobSiteLink());
+                  scrappedData.insert({category:"jobSearchResult", appId: applicationUID, data: indeedParse(scrappedData.findOne({category:"content"}).content)});
+                  // fs = Npm.require('fs');
+                  // path = "./public/";
+                  // fs.writeFile(name = (path + "whatever"+jobQuery.appId), indeedParse(scrappedData.findOne({category:"content"}).content), encoding = "utf8", 
+                  // function(err) 
+                  // {
+                  //   if (err) 
+                  //   {
+                  //     throw (new Meteor.Error(500, 'Failed to save file.', err));
+                  //   } 
+                  //   else 
+                  //   {
+                      
+                  //   }
+                  // });
+                  // scrappedData.insert({category:"fileName", appId:applicationUID+"", fileName:"whatever"+jobQuery.appId});
+              }
+          }
+          ,100);
     
-    fs = Npm.require('fs');
-    path = "./";
-    fs.writeFile(name = (path + "whatever"), scrappedData.findOne({category:"content"}).content, encoding = "utf8", function(err) {
-    if (err) {
-      throw (new Meteor.Error(500, 'Failed to save file.', err));
-    } else {
-      console.log('The file ' + name + ' (' + encoding + ') was saved to ' + path);
-    }
-  });
+    
    
     //saveFile(scrappedData.findOne({category:"content"}).content, "whatever", "./", "ANSI");
-    scrape("http://ca.indeed.com/jobs?q=hr+assistant&l=Toronto,+ON&rq=1&fromage=last");
+    //scrape("http://ca.indeed.com/jobs?q=hr+assistant&l=Toronto,+ON&rq=1&fromage=last");
     
-    console.log(indeedParse(scrappedData.findOne({category:"content"}).content));
+    //console.log(indeedParse(scrappedData.findOne({category:"content"}).content));
 
   });
 }

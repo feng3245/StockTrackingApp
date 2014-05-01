@@ -50,6 +50,12 @@ linkParser = function(htmlData)
 		});
 		return survivingBlocks;
 	}
+	this.getJobLinkAnchors = function(joblinks, jobSite)
+	{
+		var anchorLinks = new Array();
+		joblinks.forEach(function(element,index,array){anchorLinks.push("<a href=\""+jobSite.replace(/^[/]+|[/]+$/gm,'').replace(/^[\\]+|[\\]+$/gm,'')+element+"\"/>");});	
+		return anchorLinks;
+	}
 	this.getMatchingLinkSections = function(tag,cssClass,extraParam)
 	{
 		var tagCount = this.getTags(tag,cssClass, data).length;

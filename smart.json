@@ -1,6 +1,7 @@
 {
   "packages": {
     "server-session": {},
-    "accounts-anonymous": {}
+    "accounts-anonymous": {},
+    "router": {}
   }
 }

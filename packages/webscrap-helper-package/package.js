@@ -5,6 +5,6 @@ Npm.depends({"chai": "1.8.1"});
 
 Package.on_use(function(api){
 api.use(["underscore", "templating"], "client");	
-api.add_files(["webscrapeHelper.js", "./libs/jobSiteParse.js"], "server");
-api.registered_extensions(["linkParser", "indeedParse"], "server");
+api.add_files(["webscrapeHelper.js", "./libs/jobSiteParse.js", "./libs/jobSiteHelper.js"], "server");
+api.registered_extensions(["linkParser", "indeedParse", "indeedSiteHelper"], "server");
 });
