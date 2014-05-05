@@ -1,6 +1,6 @@
 scrappedData = new Meteor.Collection("ScrappedData");
 applicationUID = undefined;
-
+opTime = undefined
 if (Meteor.isClient) {
   
   Template.SearchJobs.events({
@@ -13,25 +13,37 @@ if (Meteor.isClient) {
           Session.set("applicationUID", Meteor.uuid());
           applicationUID = Session.get("applicationUID");
         }
+        scrappedData.insert({category:"jobDone", appId: applicationUID+"", status: "notDone"});
+        var d = new Date();
+        var frontOpTime = d.getTime(); 
+        var d2 = new Date();
+        opTime = d2.getTime();
 
         Meteor.call("serverAppIDSync", applicationUID);
-        
-
-        scrappedData.insert({category:"jobSearchData", appId:applicationUID+"", jobTitle:Session.get("JobTitle"), city:Session.get("City"), province:Session.get("Province")});
-        
-        var displayFile = setInterval(
+        Meteor.call("serverOpTimeSync", opTime);        
+        scrappedData.insert({category:"jobSearchData", appId:applicationUID+"", jobTitle:Session.get("JobTitle"), city:Session.get("City"), province:Session.get("Province"), startTime: opTime}, 
+          function(err,db){
+            if(!err){
+          var displayFile = setInterval(
           function()
           {
-            if(scrappedData.findOne({category:"jobSearchResult", appId: applicationUID+""})!=undefined)
+          
+            if(scrappedData.findOne({category:"jobSearchResult", appId: applicationUID+"", finTime: opTime})!=undefined)
             {
-                $("#Results").html(scrappedData.findOne({category:"jobSearchResult", appId: applicationUID+""}).data);
-                
+                $("#Results").html("");
+                $("#Results").html(scrappedData.findOne({category:"jobSearchResult", appId: applicationUID+"", finTime: opTime}).data);
+                console.log(scrappedData.findOne({category:"jobSearchResult", appId: applicationUID+"", finTime: opTime})) ;
                 clearInterval(displayFile);
             }
 
                 
           },100
           );
+        }
+      }
+      );
+        
+        
         //scrappedData.remove({category:"fileName", appId: applicationUID+""});
         
       }
@@ -73,6 +85,10 @@ if (Meteor.isServer) {
     serverAppIDSync: function(appId)
     {
       applicationUID = appId;
+    },
+    serverOpTimeSync: function(time)
+    {
+      opTime = time;
     }
 
   });
@@ -82,29 +98,34 @@ if (Meteor.isServer) {
         {
         if(applicationUID != undefined)
           
-          var jobQuery = scrappedData.findOne({category:"jobSearchData", appId: applicationUID+""});
-            
+          var jobQuery = scrappedData.findOne({category:"jobSearchData", appId: applicationUID+"", startTime: opTime});
+
             if(jobQuery)
               {
-                  scrappedData.remove({category:"jobSearchData", appId: applicationUID+""});
+                console.log(jobQuery);
+                 
+            
                   var indeedHelper = new indeedSiteHelper(jobQuery.jobTitle, jobQuery.city, jobQuery.province);
-                  scrape(indeedHelper.getJobSiteLink());
-                  scrappedData.insert({category:"jobSearchResult", appId: applicationUID, data: indeedParse(scrappedData.findOne({category:"content"}).content)});
-                  // fs = Npm.require('fs');
-                  // path = "./public/";
-                  // fs.writeFile(name = (path + "whatever"+jobQuery.appId), indeedParse(scrappedData.findOne({category:"content"}).content), encoding = "utf8", 
-                  // function(err) 
-                  // {
-                  //   if (err) 
-                  //   {
-                  //     throw (new Meteor.Error(500, 'Failed to save file.', err));
-                  //   } 
-                  //   else 
-                  //   {
+                  scrape(indeedHelper.getJobSiteLink(), opTime);
+                             scrappedData.remove({category:"jobSearchResult", appId: applicationUID}); 
+                 var d = new Date();
+                 var scrapeResult = scrappedData.findOne({category:"content", startTime: opTime});
+                  if(scrapeResult!=undefined)
+                  {
+
+                      scrappedData.insert({category:"jobSearchResult", appId: applicationUID, data: assembleLinks(indeedParse(scrappedData.findOne({category:"content", startTime: opTime}).content), "http://ca.indeed.com/"), finTime: opTime});  
                       
-                  //   }
-                  // });
-                  // scrappedData.insert({category:"fileName", appId:applicationUID+"", fileName:"whatever"+jobQuery.appId});
+                 console.log(indeedParse(scrapeResult.content));
+                  scrappedData.remove({category:"jobSearchData", appId: applicationUID+""});
+                 scrappedData.remove({category:"jobDone", appId: applicationUID+""});
+                 scrappedData.insert({category:"jobDone", appId: applicationUID+"", status: "Done", finTime: opTime });
+                  
+                  }
+                 else
+                  return;
+                  
+                 
+                 
               }
           }
           ,100);

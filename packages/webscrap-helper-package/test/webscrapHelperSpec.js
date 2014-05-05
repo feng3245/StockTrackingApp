@@ -123,20 +123,29 @@ describe("getJobLinkAnchors(joblinks, jobSite)", function()
 	it("Should concatenate the links and the website into an anchor tag", function()
 	{
 		expect(parser.getJobLinkAnchors(joblinks,"somesite.com").length).to.equal(2);
-		expect(parser.getJobLinkAnchors(joblinks,"somesite.com")[0]).to.equal("<a href=\"somesite.com/stuff/Ab\"/>");
-		expect(parser.getJobLinkAnchors(joblinks,"somesite.com")[1]).to.equal("<a href=\"somesite.com/stuff/bob\"/>");
+		expect(parser.getJobLinkAnchors(joblinks,"somesite.com")[0]).to.equal("<a href='somesite.com/stuff/Ab' target='_blank'>somesite.com/stuff/Ab</a><br />");
+		expect(parser.getJobLinkAnchors(joblinks,"somesite.com")[1]).to.equal("<a href='somesite.com/stuff/bob' target='_blank'>somesite.com/stuff/bob</a><br />");
 	});
 	it("Should still work with the \\", function()
 	{
-		expect(parser.getJobLinkAnchors(joblinks,"somesite.com\\").length).to.equal(2);
-		expect(parser.getJobLinkAnchors(joblinks,"somesite.com\\")[0]).to.equal("<a href=\"somesite.com/stuff/Ab\"/>");
-		expect(parser.getJobLinkAnchors(joblinks,"somesite.com\\")[1]).to.equal("<a href=\"somesite.com/stuff/bob\"/>");
+		expect(parser.getJobLinkAnchors(joblinks,"somesite.com").length).to.equal(2);
+		expect(parser.getJobLinkAnchors(joblinks,"somesite.com")[0]).to.equal("<a href='somesite.com/stuff/Ab' target='_blank'>somesite.com/stuff/Ab</a><br />");
+		expect(parser.getJobLinkAnchors(joblinks,"somesite.com")[1]).to.equal("<a href='somesite.com/stuff/bob' target='_blank'>somesite.com/stuff/bob</a><br />");
 	});
 	it("Should still work with the /", function()
 	{
-		expect(parser.getJobLinkAnchors(joblinks,"somesite.com/").length).to.equal(2);
-		expect(parser.getJobLinkAnchors(joblinks,"somesite.com/")[0]).to.equal("<a href=\"somesite.com/stuff/Ab\"/>");
-		expect(parser.getJobLinkAnchors(joblinks,"somesite.com/")[1]).to.equal("<a href=\"somesite.com/stuff/bob\"/>");
+		expect(parser.getJobLinkAnchors(joblinks,"somesite.com").length).to.equal(2);
+		expect(parser.getJobLinkAnchors(joblinks,"somesite.com")[0]).to.equal("<a href='somesite.com/stuff/Ab' target='_blank'>somesite.com/stuff/Ab</a><br />");
+		expect(parser.getJobLinkAnchors(joblinks,"somesite.com")[1]).to.equal("<a href='somesite.com/stuff/bob' target='_blank'>somesite.com/stuff/bob</a><br />");
 	});
+	joblinks = ["/stuff/Ab\"","/stuff/bob\""];
+	it("Should trim the the \" at the end", function()
+	{
+		expect(parser.getJobLinkAnchors(joblinks,"somesite.com").length).to.equal(2);
+		expect(parser.getJobLinkAnchors(joblinks,"somesite.com")[0]).to.equal("<a href='somesite.com/stuff/Ab' target='_blank'>somesite.com/stuff/Ab</a><br />");
+		expect(parser.getJobLinkAnchors(joblinks,"somesite.com")[1]).to.equal("<a href='somesite.com/stuff/bob' target='_blank'>somesite.com/stuff/bob</a><br />");
+
+	}
+		);
 
 });
