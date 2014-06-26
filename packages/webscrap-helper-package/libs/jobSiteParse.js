@@ -5,6 +5,11 @@ indeedParse = function(htmlData)
 	var definitionList = [{tag:"div", cssClass:"\"row \""},{tag:"h2", cssClass:"jobtitle"}];
 	return parser.getJobLinks(definitionList, linkFindingFunction);
 }
+assembleLinks = function(joblinks, jobSite)
+{
+	var parser = new linkParser();
+	return parser.getJobLinkAnchors(joblinks, jobSite);
+}
 linkFindingFunction = function(htmlBlocks)
 {
 	

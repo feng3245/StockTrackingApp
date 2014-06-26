@@ -1,4 +1,4 @@
-scrape = function(url)
+scrape = function(url, time)
 {
 
 	var request = Npm.require('request');
@@ -18,7 +18,7 @@ scrape = function(url)
 				strContent += body;
 				
 				scrappedData.remove({ 'category' :"content"});
-				scrappedData.insert({category:"content", content:""+strContent});
+				scrappedData.insert({category:"content", content:""+strContent, startTime: time});
 
 			}		
 			).run();
