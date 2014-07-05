@@ -12,7 +12,7 @@ if (Meteor.isServer) {
     writeToMail = function(content)
   {
         fs = Npm.require('fs');
-        path = ".\\..\\..\\..\\..\\inetpub\\mailroot\\Pickup";
+        path = ".\\..\\..\\..\\..\\inetpub\\mailroot\\Pickup\\";
     //scrappedData.findOne({category:"content"}).content
     fs.writeFile(name = (path + "whatever"), content, encoding = "utf8", function(err) 
     {

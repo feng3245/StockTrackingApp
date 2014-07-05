@@ -10,6 +10,12 @@ assembleLinks = function(joblinks, jobSite)
 	var parser = new linkParser();
 	return parser.getJobLinkAnchors(joblinks, jobSite);
 }
+getJobPosts = function(htmlData, fullJobLinks, jobSite)
+{
+	var parser = new linkParser(htmlData);
+	var definitionList = [{tag:"div", cssClass:"\"row \""}];
+	return parser.getJobLinks(definitionList, postFindingFunction);
+}
 linkFindingFunction = function(htmlBlocks)
 {
 	
@@ -29,4 +35,9 @@ linkFindingFunction = function(htmlBlocks)
 	});	
 	return links;
 
+}
+postFindingFunction = function(htmlBlocks)
+{
+
+	return htmlBlocks;
 }
