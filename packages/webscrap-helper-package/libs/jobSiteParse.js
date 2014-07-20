@@ -1,4 +1,4 @@
-
+require('./siteParserFactory.js');
 indeedParse = function(htmlData)
 {
 	var parser = new linkParser(htmlData);
@@ -14,7 +14,8 @@ getJobPosts = function(htmlData, fullJobLinks, jobSite)
 {
 	var parser = new linkParser(htmlData);
 	var definitionList = [{tag:"div", cssClass:"\"row \""}];
-	return parser.getJobLinks(definitionList, postFindingFunction);
+	var siteparser = new siteParserFactory().getParserFromSiteLink(jobSite);
+	return siteparser.parseContent(parser.getJobLinks(definitionList, postFindingFunction));
 }
 linkFindingFunction = function(htmlBlocks)
 {

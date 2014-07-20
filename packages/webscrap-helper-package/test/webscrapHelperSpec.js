@@ -52,13 +52,38 @@ describe("getMatchingLinkSections(tag,cssClass,extraParam)",function(){
 	 		);
 	 }
 	);
-describe("getTags(tag,cssClass)", function(){
+//Change this to work with id as well
+describe("getTags(tag,tagAttr,html)", function(){
 
 		it("Should return the first div",
 	 		function()
 	 		{
 	 			parser = new linkParser();
-	 			expect(parser.getTags("div","\"shit\"","<div class=\"blah\"><div class=\"shit\"><div class=\"whatever\">sdfsdfsfd</div></div></div>")[0]).to.equal("<div class=\"shit\">");
+	 			expect(parser.getTags("div",{cssclass:"\"shit\""},"<div class=\"blah\"><div class=\"shit\"><div class=\"whatever\">sdfsdfsfd</div></div></div>")[0]).to.equal("<div class=\"shit\">");
+
+	 		}
+	 		);
+		it("Should return the tag matching both class and id div",
+	 		function()
+	 		{
+	 			parser = new linkParser();
+	 			expect(parser.getTags("div",{cssclass:"\"shit\"", _id:"\"lol\""},"<div class=\"blah\"><div class=\"shit\"><div class=\"shit\" id=\"lol\"></div><div class=\"whatever\">sdfsdfsfd</div></div></div>")[0]).to.equal("<div class=\"shit\" id=\"lol\">");
+
+	 		}
+	 		);
+		it("Should return the tag matching only id div",
+	 		function()
+	 		{
+	 			parser = new linkParser();
+	 			expect(parser.getTags("div",{_id:"\"lol\""},"<div class=\"blah\"><div class=\"shit\"><div class=\"shit\" id=\"lol\"></div><div class=\"whatever\">sdfsdfsfd</div></div></div>")[0]).to.equal("<div class=\"shit\" id=\"lol\">");
+
+	 		}
+	 		);
+		it("Should return the tag matching only id div containing additional numbered attributs",
+	 		function()
+	 		{
+	 			parser = new linkParser();
+	 			expect(parser.getTags("div",{_id:"\"lol\""},"<div class=\"blah\"><div class=\"shit\"><div class=\"shit\" id=\"lol123\"></div><div class=\"whatever\">sdfsdfsfd</div></div></div>")[0]).to.equal("<div class=\"shit\" id=\"lol123\">");
 
 	 		}
 	 		);
@@ -66,7 +91,7 @@ describe("getTags(tag,cssClass)", function(){
 			function()
 			{
 				parser = new linkParser();
-	 			expect(parser.getTags("div","\"shit\"", "<div class=\"blah\"><div class=\"shit\"><div class=\"whatever\">sdfsdfsfd</div></div></div><div class=\"shit\"><div class=\"whatever\">sdfsdfsfd</div></div>").length).to.equal(1);
+	 			expect(parser.getTags("div",{cssclass:"\"shit\""}, "<div class=\"blah\"><div class=\"shit\"><div class=\"whatever\">sdfsdfsfd</div></div></div><div class=\"shit\"><div class=\"whatever\">sdfsdfsfd</div></div>").length).to.equal(1);
 
 
 			});
@@ -74,9 +99,9 @@ describe("getTags(tag,cssClass)", function(){
 			function()
 			{
 				parser = new linkParser();
-				expect(parser.getTags("div","\"shit\"", "<div class=\"blah\"><div class=\"shit\"><div class=\"whatever\">sdfsdfsfd</div></div></div><div class=\"shit\" blah=\"different\"><div class=\"whatever\">sdfsdfsfd</div></div>").length).to.equal(2);
-				expect(parser.getTags("div","\"shit\"", "<div class=\"blah\"><div class=\"shit\"><div class=\"whatever\">sdfsdfsfd</div></div></div><div class=\"shit\" blah=\"different\"><div class=\"whatever\">sdfsdfsfd</div></div>")[0]).to.equal("<div class=\"shit\">");
-				expect(parser.getTags("div","\"shit\"",  "<div class=\"blah\"><div class=\"shit\"><div class=\"whatever\">sdfsdfsfd</div></div></div><div class=\"shit\" blah=\"different\"><div class=\"whatever\">sdfsdfsfd</div></div>")[1]).to.equal("<div class=\"shit\" blah=\"different\">");
+				expect(parser.getTags("div",{cssclass:"\"shit\""}, "<div class=\"blah\"><div class=\"shit\"><div class=\"whatever\">sdfsdfsfd</div></div></div><div class=\"shit\" blah=\"different\"><div class=\"whatever\">sdfsdfsfd</div></div>").length).to.equal(2);
+				expect(parser.getTags("div",{cssclass:"\"shit\""}, "<div class=\"blah\"><div class=\"shit\"><div class=\"whatever\">sdfsdfsfd</div></div></div><div class=\"shit\" blah=\"different\"><div class=\"whatever\">sdfsdfsfd</div></div>")[0]).to.equal("<div class=\"shit\">");
+				expect(parser.getTags("div",{cssclass:"\"shit\""},  "<div class=\"blah\"><div class=\"shit\"><div class=\"whatever\">sdfsdfsfd</div></div></div><div class=\"shit\" blah=\"different\"><div class=\"whatever\">sdfsdfsfd</div></div>")[1]).to.equal("<div class=\"shit\" blah=\"different\">");
 			}
 			);
 		it("Should support matching of non quoted classes", function()

@@ -41,7 +41,7 @@ linkParser = function(htmlData)
 			var tag = element.tag;
 			var cssClass = element.cssClass;
 			survivingBlocks.forEach(function(element,index,array){
-				if(!(getTagsFunc(tag,cssClass, element).length>0))
+				if(!(getTagsFunc(tag,{cssclass:cssClass+""}, element).length>0))
 				{
 					survivingBlocks.remByVal(element);
 				}
@@ -58,10 +58,9 @@ linkParser = function(htmlData)
 	}
 	this.getMatchingLinkSections = function(tag,cssClass,extraParam)
 	{
-		var tagCount = this.getTags(tag,cssClass, data).length;
-		//console.log("Getting tags");
-		//console.log(this.getTags(tag,cssClass, data));
-		var tags = this.getTags(tag,cssClass, data).unique();
+		var tagCount = this.getTags(tag,{cssclass:cssClass+""}, data).length;
+		
+		var tags = this.getTags(tag,{cssclass:cssClass+""}, data).unique();
 		var matchingLinkBlocks = new Array();
 		var i;
 		for(i=0;i<tagCount; i++)
@@ -71,9 +70,28 @@ linkParser = function(htmlData)
 		return matchingLinkBlocks;
 
 	}
-	this.getTags = function(tag, cssClass, htmlData)
+	this.getTags = function(tag, tagAttr, htmlData)
 	{
-		var pattern = new RegExp("<"+tag+"[^>]*class="+cssClass+"[^>]*>", "g");
+		
+		var pattern = new RegExp("<"+tag+"[^>]*class="+tagAttr.cssclass+"[^>]*>", "g");
+		if(tagAttr._id!=undefined)
+		{
+			if(tagAttr.cssclass!=undefined)
+			{
+
+				var pattern1 = new RegExp("<"+tag+"[^>]*id="+tagAttr._id+"[^>]*class="+tagAttr.cssclass+"[^>]*>", "g");
+			var pattern2 = new RegExp("<"+tag+"[^>]*class="+tagAttr.cssclass+"[^>]*id="+tagAttr._id+"[^>]*>", "g");
+			return htmlData.match(pattern1) == null?htmlData.match(pattern2).unique():htmlData.match(pattern1).unique();
+			}
+			var idsearchpattern = new RegExp("<"+tag+"[^>]*id=\""+tagAttr._id.replace(new RegExp("\"","g"),"")+"[^\"]*\"[^>]*>", "g");
+			
+			var goodmatches = new Array();
+			htmlData.match(idsearchpattern).forEach(function(entry){if(entry!=null&& entry!=undefined)goodmatches.push(entry);});
+			
+			return goodmatches.unique();
+			
+
+		}
 		if(htmlData.match(pattern) == null)
 			return [];
 		return htmlData.match(pattern).unique();
@@ -81,7 +99,14 @@ linkParser = function(htmlData)
 	this.getMatchingBlocks = function(tagString, htmlBlock)
 	{
 		
-		var numberOfBlocks = htmlBlock.match(new RegExp(tagString,"g")).length;
+		var tempblock = htmlBlock;
+		var numberOfBlocks = 0;
+		while(tempblock.indexOf(tagString)!=-1)
+		{
+			tempblock = tempblock.replace(tagString,"");
+			numberOfBlocks++;
+		}
+
 		var tmpHtmlBlock = htmlBlock;
 		var matchingBlocks = new Array();
 		
@@ -149,10 +174,7 @@ linkParser = function(htmlData)
 						}
 						iterationCount++;
 
-						if(iterationCount == 6)
-						{
-						console.log(Block);
-						}
+						
 					})();
 					
 				}

@@ -4,7 +4,7 @@ siteParserFactory = function()
 	this.getParserFromSiteLink = function(sitelink)
 	{
 
-		if(sitelink == "indeed.ca")
+		if((""+sitelink).indexOf("indeed")!=-1)
 		{
 			return new indeedJobSiteParser();
 		}
