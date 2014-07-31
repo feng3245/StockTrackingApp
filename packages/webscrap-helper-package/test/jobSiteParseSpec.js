@@ -1,7 +1,7 @@
 require("../libs/jobSiteParse.js");
 fs = require("fs");
 var htmldata; 
-
+var expect = null;
 fs.readFile("./testFiles/Pickupwhatever", 'utf8', function (err, data) {
         if (err) {
             console.log('Error: ' + err);
@@ -9,7 +9,7 @@ fs.readFile("./testFiles/Pickupwhatever", 'utf8', function (err, data) {
         }
         console.log(err);        
         htmldata = data;
-        var expect = require("../.npm/node_modules/chai/chai.js").expect;
+         expect = require("../.npm/node_modules/chai/chai.js").expect;
 
 describe("getJobPosts(htmlData, fullJobLinks, jobSite)", function()
 {
@@ -23,4 +23,17 @@ describe("getJobPosts(htmlData, fullJobLinks, jobSite)", function()
 });
 
     });
+function more(str1, str2)
+{
+
+    
+}
+describe("more(str1,str2)", function()
+{
+    it("Should return what str1 have that str2 dont", function(){
+
+        expect(more("<a></a>sdf<b></b><c></c>","<a></a>sdf<c></c>")).to.equal("<b></b>");
+    });
+
+});
 
